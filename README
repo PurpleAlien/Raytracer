@@ -1,0 +1,8 @@
+Simple ray tracer in C, mostly used for benchmarking. Supports multi threading.
+
+Compiling: running 'make' on a Unix/Linux/BSD platform should do. It only needs pthreads and math library.
+
+Running: 
+	Normal: ./raytrace scene.txt
+	With 3D object: ./raytrace scene.txt spaceship.3ds 
+this last one will render a spaceship, using the 3ds loader. 
