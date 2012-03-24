@@ -1,0 +1,88 @@
+#General scene
+#In the future, we can add a 'normalized' coordinate system.
+Scene{
+	materials=4
+	triangles=1
+	spheres=3
+	lights=2
+	
+	#Perspective type: 0=orthogonal 1=conic
+	Perspective=1
+	FOV=90.0
+	ClearPoint=450.0
+	Dispersion=0.0
+	Complexity=1;
+	
+	width=1024
+	height=768
+
+}
+#Materials
+# id 0
+Material{
+	#MatType Gouraud=0 Marble=1 Turbulence=2
+	MatType=1
+	mdiffuse=1.0,0.5,0.0
+	diffuse=1.0,1.0,0.0
+	reflection=0.5
+	specular=1.0,1.0,1.0
+	power=60
+}
+#id 1
+Material{
+	#MatType Gouraud=0 Marble=1 Turbulence=2
+	MatType=0
+	bump=0.1
+	diffuse=0.0,1.0,1.0
+	reflection=0.5
+	specular=1.0,1.0,1.0
+	power=60
+}
+#id 2
+Material{
+	#MatType Gouraud=0 Marble=1 Turbulence=2
+	MatType=2
+	mdiffuse=0.15,0.0,0.15
+	diffuse=1.0,0.0,1.0
+	reflection=0.05
+	specular=1.0,1.0,1.0
+	power=60
+}
+#id 3
+Material{
+	diffuse=0.5,0.5,0.5
+	reflection=0.2
+	specular=0.1,0.1,0.1
+	power=60
+}
+
+#spheres
+#id 0
+Sphere{
+	position=440.0,570.0,512.0
+	size=100
+	material=0
+}
+#id 1
+Sphere{
+	position=760.0,460.0,760.0
+	size=100
+	material=2
+}
+#id 2
+Sphere{
+	position=540.0,124.0,600.0
+	size=100
+	material=1
+}       
+#lights
+#id 0
+Light{
+	position=0.0,380.0,300.0
+	colour=5.0,5.0,5.0
+}
+#id 1
+Light{
+	position=1024.0,768.0,-100.0
+	colour=0.7,0.6,1.0	
+}
