@@ -495,7 +495,7 @@ int main(int argc, char *argv[])
         if (img)
                 free(img);
         img = (unsigned char *)malloc(3*myScene->width*myScene->height);
-        memset(img,0,sizeof(img));
+        memset(img, 0, 3*myScene->width*myScene->height);
 
         /* Calculate section size per thread */
         sectionsize = myScene->height/NUMTHREADS;
